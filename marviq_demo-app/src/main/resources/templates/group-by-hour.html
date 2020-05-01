@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>title</title>
+</head>
+
+<body>
+	<div class="container py-5">
+		<div class="row">
+			<div class="col-10 mx-auto">
+				<form method="GET" th:action="@{/}" enctype="multipart/form-data">
+					<button type="submit" class="btn btn-primary">Start</button>
+				</form>
+				<h1>Net production group by hour</h1>
+
+
+				<!--display productions list-->
+				<table class="table table-striped" th:if="${status}">
+					<thead>
+						<tr>
+							<th scope="col">#</th>
+							<th scope="col">datetime_from</th>
+							<th scope="col">datetime_to</th>
+							<th scope="col">machineName</th>
+							<th scope="col">variable_name</th>
+							<th scope="col">value</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="production, i : ${forMOdel}">
+							<th scope="row" th:text="${i.index + 1}"></th>
+							<td th:text="${production.datetimeFrom}"></td>
+							<td th:text="${production.datetimeTo}"></td>
+							<td th:text="${production.machineName}"></td>
+							<td th:text="${production.variableName}"></td>
+							<!-- <td th:text="${production.value}"></td> -->
+						</tr>
+					</tbody>
+				</table>
+				<ol>
+    <li th:text="${listOfNetProdaction[0]}"></li>
+    <li th:text="${listOfNetProdaction[1]}"></li>
+    <li th:text="${listOfNetProdaction[2]}"></li>
+    <li th:text="${listOfNetProdaction[3]}"></li>
+    <li th:text="${listOfNetProdaction[4]}"></li>
+    <li th:text="${listOfNetProdaction[5]}"></li>
+	<li th:text="${listOfNetProdaction[6]}"></li>
+	<li th:text="${listOfNetProdaction[7]}"></li>
+    <li th:text="${listOfNetProdaction[8]}"></li>
+    <li th:text="${listOfNetProdaction[9]}"></li>
+    <li th:text="${listOfNetProdaction[10]}"></li>
+    <li th:text="${listOfNetProdaction[11]}"></li>
+    <li th:text="${listOfNetProdaction[12]}"></li>
+	<li th:text="${listOfNetProdaction[13]}"></li>
+	<li th:text="${listOfNetProdaction[14]}"></li>
+    <li th:text="${listOfNetProdaction[15]}"></li>
+    <li th:text="${listOfNetProdaction[16]}"></li>
+    <li th:text="${listOfNetProdaction[17]}"></li>
+    <li th:text="${listOfNetProdaction[18]}"></li>
+    <li th:text="${listOfNetProdaction[19]}"></li>
+	<li th:text="${listOfNetProdaction[20]}"></li>
+	<li th:text="${listOfNetProdaction[21]}"></li>
+    <li th:text="${listOfNetProdaction[22]}"></li>
+    <li th:text="${listOfNetProdaction[23]}"></li>
+
+</ol>
+				<form method="GET" th:action="@{/}" enctype="multipart/form-data">
+					<button type="submit" class="btn btn-primary">Start</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

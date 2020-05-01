@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+    xmlns:th="http://www.thymeleaf.org" 
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+	<head>
+	<title>title</title>
+
+	</head>
+<body>
+	
+
+<form method="GET" th:action="@{/all}" enctype="multipart/form-data">
+    <button type="submit" class="btn btn-primary">Load All Information</button>
+</form>
+<p></p>
+<form method="GET" th:action="@{/part1}" enctype="multipart/form-data">
+    <button type="submit" class="btn btn-primary">Production from last 24 hours</button>
+</form>
+<p></p>
+<form method="GET" th:action="@{/group_by_hour}" enctype="multipart/form-data">
+    <button type="submit" class="btn btn-primary">Production from last 24 hours group by hour</button>
+</form>
+</body>
+</html>
